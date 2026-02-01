@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>S&R Consultoria - Transforme seu delivery em máquina de vendas</title>
-  <meta name="description" content="Reestruturação de cardápio iFood, fotos profissionais, combos estratégicos e SEO local.">
-  <meta name="keywords" content="ifood, consultoria, delivery, fotos profissionais, cardápio, SEO, restaurante">
+  <meta name="description" content="Cardápio que Vende Sozinho no iFood, Google, entre outras plataformas, fotos profissionais (iremos ao local realizar as fotos, se necessário) combos estratégicos e Google Business.">
+  <meta name="keywords" content="iFood, consultoria, delivery, fotos profissionais, cardápio, SEO, restaurante">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
@@ -17,21 +17,21 @@
   <header class="header" id="header">
     <nav class="nav container">
       <a class="nav__logo" href="#home">
-        <img src="img/logo.png" alt="S&R Consultoria" width="120" height="42">
+        <img src="img/logo.webp" alt="S&R Consultoria" width="200" height="70">
       </a>
 
-      <div id="nav-menu" class="nav__menu">
+      <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link active" href="#home">Início</a></li>
           <li class="nav__item nav__item--has-dropdown">
             <a class="nav__link" href="#services">Serviços</a>
             <div class="nav__dropdown">
               <a href="#services">Fotos Profissionais</a>
-              <a href="#services">Reestruturação de Cardápio</a>
+              <a href="#services">Cardápio que Vende Sozinho</a>
               <a href="#plans">Planos</a>
             </div>
           </li>
-          <li class="nav__item"><a class="nav__link" href="#results">Resultados</a></li>
+          <li class="nav__item"><a class="nav__link" href="#before-after">Resultados</a></li> <!-- Alterado para #before-after -->
           <li class="nav__item"><a class="nav__link" href="#plans">Planos</a></li>
           <li class="nav__item"><a class="nav__link" href="#contact">Contato</a></li>
         </ul>
@@ -56,7 +56,12 @@
         <div class="hero__data">
           <h1 class="hero__title">Transforme seu delivery em uma <span>máquina de vendas</span></h1>
           <p class="hero__description">
-            Reestruturação completa de cardápio iFood • Fotos profissionais • Combos estratégicos • SEO local
+            • Reestruturação completa de cardápio iFood <br>
+            • Fotos profissionais <br>
+            • Combos estratégicos <br>
+            • Inclusão ou melhorias no Google Business<br>
+            • Automatização do WhatsApp:<br>
+              Resposta automática | Atualização do Cardápio
           </p>
           <a class="button button--cta" href="#contact">
             <i class="fas fa-calendar-check"></i>
@@ -65,106 +70,132 @@
         </div>
 
         <div class="hero__blob">
-          <img src="img/hero-img.png" alt="Vários caldos em tigelas - amostra de fotos profissionais" class="hero__blob-img">
+         <img src="img/hero-img.webp" alt="Fotos Profissionais" class="hero__img-main" loading="lazy" decoding="async">      
+          <div class="hero__stats card-1">
+            <i class="fas fa-chart-line"></i>
+            <span>+45% Conversão</span>
+          </div>
+          
+          <div class="hero__stats card-2">
+            <i class="fas fa-star"></i>
+            <span>Nota 4.9 no iFood</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Services -->
+
+   <!-- Services -->
     <section id="services" class="services section">
       <div class="container">
-        <h2 class="section__title">Nossos Serviços</h2>
-        <p class="section__subtitle">Soluções completas para alavancar suas vendas no delivery</p>
+        <h2 class="section__title">Estratégias de Alto Impacto</h2>
+        <p class="section__subtitle">Tudo o que seu delivery precisa para sair da invisibilidade e vender todos os dias.</p>
 
         <div class="services__container">
+          
           <div class="services__card" data-service="Fotos Profissionais">
             <div class="services__icon"><i class="fas fa-camera"></i></div>
             <div class="services__content">
-              <h3 class="services__title">Fotos Profissionais</h3>
-              <p class="services__description">Sessão com iluminação e edição premium para destacar seus pratos e aumentar conversões.</p>
+              <h3 class="services__title">Fotografia Premium</h3>
+              <p class="services__description">Transformamos seus pratos em desejo imediato com iluminação e edição de alto padrão.</p>
             </div>
           </div>
 
-          <div class="services__card" data-service="Reestruturação de Cardápio">
+          <div class="services__card" data-service="Cardápio que Vende Sozinho">
             <div class="services__icon"><i class="fas fa-utensils"></i></div>
             <div class="services__content">
-              <h3 class="services__title">Reestruturação de Cardápio</h3>
-              <p class="services__description">Nomes persuasivos, categorias otimizadas e descrições que vendem mais.</p>
+              <h3 class="services__title">Cardápio Irresistível</h3>
+              <p class="services__description">Engenharia de cardápio com descrições persuasivas e categorias que facilitam a compra.</p>
             </div>
           </div>
 
           <div class="services__card" data-service="Combos Estratégicos">
-            <div class="services__icon"><i class="fas fa-gift"></i></div>
+            <div class="services__icon"><i class="fas fa-chart-line"></i></div>
             <div class="services__content">
-              <h3 class="services__title">Combos Estratégicos</h3>
-              <p class="services__description">Combos testados para aumentar ticket médio e frequência de compra.</p>
+              <h3 class="services__title">Ticket Médio Elevado</h3>
+              <p class="services__description">Criação de combos inteligentes que aumentam o lucro por pedido e a recorrência dos clientes.</p>
             </div>
           </div>
 
-          <div class="services__card" data-service="SEO para iFood & Google">
-            <div class="services__icon"><i class="fas fa-search"></i></div>
+          <div class="services__card" data-service="Google Meu Negócio">
+            <div class="services__icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="services__content">
-              <h3 class="services__title">SEO para iFood & Google</h3>
-              <p class="services__description">Palavras-chave e Google Business para captar mais clientes locais.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Results: Before / After -->
-    <section id="results" class="section">
-      <div class="container">
-        <h2 class="section__title">Resultado Real: Bina Caldos & Sopas</h2>
-        <p class="section__subtitle">Veja a transformação aplicada ao cardápio — comparação antes e depois</p>
-
-        <div class="before-after-wrapper">
-          <div class="ba-header">
-            <div class="ba-label before-label">ANTES</div>
-            <div class="ba-label after-label">DEPOIS</div>
-          </div>
-
-          <div id="baComparator" class="ba-comparator">
-            <div class="ba-image-container">
-              <img id="baBeforeImg" class="ba-image-before" 
-                   src="img/bina-antes1.jpg" 
-                   alt="Cardápio antes da otimização">
-              
-              <div id="baAfterWrap" class="ba-after-wrap">
-                <img id="baAfterImg" class="ba-image-after" 
-                     src="img/bina-depois1.jpg" 
-                     alt="Cardápio depois da otimização">
-              </div>
-              
-              <div id="baSlider" class="ba-slider" tabindex="0">
-                <div class="ba-handle">↔</div>
-              </div>
+              <h3 class="services__title">Presença no Google</h3>
+              <p class="services__description">Sua loja no topo das buscas locais com perfil otimizado, fotos reais e SEO estratégico.</p>
             </div>
           </div>
 
-          <!-- Thumbnails -->
-          <div class="ba-thumbs">
-            <button class="ba-thumb active" 
-                    data-before="img/bina-antes1.jpg" 
-                    data-after="img/bina-depois1.jpg">
-              <img src="img/bina-depois1.jpg" alt="Exemplo 1">
-            </button>
-            
-            <button class="ba-thumb" 
-                    data-before="img/bina-antes2.jpg" 
-                    data-after="img/bina-depois2.jpg">
-              <img src="img/bina-depois2.jpg" alt="Exemplo 2">
-            </button>
+          <div class="services__card" data-service="WhatsApp Business">
+            <div class="services__icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="services__content">
+              <h3 class="services__title">WhatsApp que Vende</h3>
+              <p class="services__description">Catálogo profissional e automação inteligente para você nunca mais perder um pedido por demora.</p>
+            </div>
+          </div>
+          
+          <div class="services__card" data-service="Suporte Tecnológico">
+            <div class="services__icon"><i class="fas fa-microchip"></i></div>
+            <div class="services__content">
+              <h3 class="services__title">Operação Blindada</h3>
+              <p class="services__description">Suporte em redes, roteadores e dispositivos (celular/PC) para garantir que sua loja nunca fique offline.</p>
+            </div>
           </div>
         </div>
-
-        <div style="text-align:center; margin-top:2.5rem;">
-          <a class="button" href="#" onclick="alert('Portfólio em construção!')">
-            <i class="fas fa-download"></i> Baixar Portfólio Completo
-          </a>
-        </div>
-      </div>
     </section>
+	
+	<section id="before-after" class="section">
+		<div class="container">
+			<h2 class="section__title">Antes e Depois</h2>
+			<p class="section__subtitle">Resultados reais no cardápio</p>
+
+		<div class="compare">
+			  <div class="compare__item">
+			  <div class="compare__title compare__title--before">ANTES</div>
+			  <figure class="compare__frame">
+				<img id="imgBefore" class="compare__img" src="img/bina-antes1_padrao.webp" alt="Antes" loading="lazy" decoding="async">
+			  </figure>
+			</div>
+
+					<div class="compare__item">
+			  <div class="compare__title compare__title--after">DEPOIS</div>
+			  <figure class="compare__frame">
+				<img id="imgAfter" class="compare__img" src="img/bina-depois1_padrao.webp" alt="Depois" loading="lazy" decoding="async">
+			  </figure>
+		</div>
+
+		  <div class="compare__thumbs" aria-label="Escolha um exemplo">
+			<button class="compare__thumb is-active"
+			  data-before="img/bina-antes1_padrao.webp"
+			  data-after="img/bina-depois1_padrao.webp" type="button">
+			  <img src="img/bina-depois1_padrao.webp" alt="Exemplo 1">
+			  <span>Resultado 1</span>
+			</button>
+
+			<button class="compare__thumb"
+			  data-before="img/bina-antes2_padrao.webp"
+			  data-after="img/bina-depois3_padrao.webp" type="button">
+			  <img src="img/bina-depois3_padrao.webp" alt="Exemplo 2">
+			  <span>Resultado 2</span>
+			</button>
+
+			<button class="compare__thumb"
+			  data-before="img/bina-antes3_padrao.webp"
+			  data-after="img/bina-depois4_padrao.webp" type="button">
+			  <img src="img/bina-depois4_padrao.webp" alt="Exemplo 3">
+			  <span>Resultado 3</span>
+			</button>
+
+			<button class="compare__thumb"
+			  data-before="img/bina-antes4_padrao.webp"
+			  data-after="img/bina-depois5_padrao.webp" type="button">
+			  <img src="img/bina-depois5_padrao.webp" alt="Exemplo 4">
+			  <span>Resultado 4</span>
+			</button>
+		  </div>
+		</div>
+	  </div>
+	</section>
+
 
     <!-- Plans -->
     <section id="plans" class="plans section">
@@ -176,15 +207,15 @@
           <article class="plan__card">
             <h3 class="plan__title">Básico</h3>
             <div class="plan__price">
-              <span class="plan__amount">R$ 450</span>
+              <span class="plan__amount">R$ 150</span>
             </div>
             <ul class="plan__features">
               <li>Até 15 fotos profissionais</li>
               <li>Você mesmo upa no iFood</li>
-              <li>Entrega rápida via WhatsApp</li>
-              <li>Suporte por 7 dias</li>
+              <li>Entrega rápida via whatsapp com um link para não perder a qualidade!</li>
+              <li>Suporte por 7 dias no WhatsApp</li>
             </ul>
-            <button class="plan__cta button" onclick="openWhatsApp('Plano Básico - R$450')">
+            <button class="plan__cta button" onclick="openWhatsApp('Plano Básico - R$150')">
               Quero este plano
             </button>
           </article>
@@ -193,15 +224,15 @@
             <span class="plan__badge">Mais vendido</span>
             <h3 class="plan__title">Premium</h3>
             <div class="plan__price">
-              <span class="plan__amount">R$ 2.290</span>
+              <span class="plan__amount">R$ 500</span>
             </div>
             <ul class="plan__features">
               <li>Tudo do Básico + fotos ilimitadas</li>
               <li>Combos estratégicos</li>
-              <li>SEO + Google Business</li>
-              <li>Reestruturação completa</li>
+              <li>Google Business</li>
+              <li>Reestruturação completa do cardápio</li>
             </ul>
-            <button class="plan__cta button button--white" onclick="openWhatsApp('Plano Premium - R$2.290')">
+            <button class="plan__cta button button--white" onclick="openWhatsApp('Plano Premium - R$ 500')">
               Quero este plano
             </button>
           </article>
@@ -212,7 +243,8 @@
               <span class="plan__amount">Sob consulta</span>
             </div>
             <ul class="plan__features">
-              <li>Para redes com 3+ lojas</li>
+              <li>Tudo que inclui no plano premium</li>
+              <li>Para redes com 3 ou + lojas</li>
               <li>Gestão completa e relatórios</li>
               <li>Consultoria personalizada</li>
               <li>Suporte prioritário</li>
@@ -225,10 +257,19 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact section">
+	<section class="section">
+	  <div class="container" style="text-align:center;">
+		<a class="button" href="#" onclick="alert('Portfólio em construção!')">
+		  <i class="fas fa-download"></i> Baixar Portfólio Completo
+		</a>
+	  </div>
+	</section>
+
+
+ <section id="contact" class="contact section">
       <div class="container">
         <h2 class="section__title">Fale Conosco</h2>
+        <p class="section__title">Atendemos apenas 4 novos restaurantes por mês para garantir a qualidade.</p>
         <p class="section__subtitle">Para uma análise gratuita do seu cardápio, fale diretamente pelo WhatsApp</p>
 
         <div class="contact__cta">
@@ -259,16 +300,7 @@
           <div class="footer__subtitle">Fotos e estratégia para aumentar vendas no delivery</div>
         </div>
 
-        <nav class="footer__nav">
-          <ul class="footer__links">
-            <li><a class="footer__link" href="#services">Serviços</a></li>
-            <li><a class="footer__link" href="#results">Resultados</a></li>
-            <li><a class="footer__link" href="#plans">Planos</a></li>
-            <li><a class="footer__link" href="#contact">Contato</a></li>
-          </ul>
-        </nav>
-
-        <div class="footer__socials">
+<div class="footer__socials">
           <a class="footer__social" href="https://wa.me/5518991657604" target="_blank">
             <i class="fab fa-whatsapp"></i>
           </a>
@@ -278,37 +310,19 @@
         </div>
       </div>
 
-      <p class="footer__copy">
-        © 2025 S&R Consultoria • Todos os direitos reservados
-      </p>
+	<p class="footer__copy">
+	  © 2025 S&R Consultoria ® • Todos os direitos reservados<br>
+	  <span class="footer__cnpj">CNPJ: 62.219.322/0001-83</span>
+	</p>
     </div>
   </footer>
 
-  <!-- Scroll up -->
+ <!-- Scroll up -->
   <a href="#home" id="scroll-up" class="scrollup">
     <i class="fas fa-arrow-up"></i>
   </a>
-
-  <script src="js/main.js" defer></script>
+ 
+ <script src="js/main.js" defer></script>
   
-  <script>
-    // Função para WhatsApp
-    function openWhatsApp(plano) {
-      const texto = encodeURIComponent(`Olá! Tenho interesse no ${plano}. Poderiam me passar mais informações?`);
-      window.open(`https://wa.me/5518991657604?text=${texto}`, '_blank');
-    }
-    
-    // Cards de serviços clicáveis
-    document.addEventListener('DOMContentLoaded', function() {
-      const serviceCards = document.querySelectorAll('.services__card');
-      serviceCards.forEach(card => {
-        card.addEventListener('click', function() {
-          const serviceName = this.getAttribute('data-service') || this.querySelector('.services__title').textContent;
-          const texto = encodeURIComponent(`Olá! Tenho interesse no serviço: "${serviceName}". Poderiam me passar mais informações e orçamento?`);
-          window.open(`https://wa.me/5518991657604?text=${texto}`, '_blank');
-        });
-      });
-    });
-  </script>
 </body>
 </html>
