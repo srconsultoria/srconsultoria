@@ -148,20 +148,22 @@
 			<h2 class="section__title">Antes e Depois</h2>
 			<p class="section__subtitle">Resultados reais no cardápio</p>
 
-		<div class="compare">
-			  <div class="compare__item">
+		<div class="compare">	
+			<div class="compare__grid">
+			  <figure class="compare__item">
 			  <div class="compare__title compare__title--before">ANTES</div>
-			  <figure class="compare__frame">
+			  <div class="compare__frame">
 				<img id="imgBefore" class="compare__img" src="img/bina-antes1_padrao.webp" alt="Antes" loading="lazy" decoding="async">
+			  </div>
+			</figure>
+
+			<figure class="compare__item">
+				<div class="compare__title compare__title--after">DEPOIS</div>
+			<div class="compare__frame">
+					<img id="imgAfter" class="compare__img" src="img/bina-depois1_padrao.webp" alt="Depois" loading="lazy" decoding="async">
+				</div>
 			  </figure>
 			</div>
-
-					<div class="compare__item">
-			  <div class="compare__title compare__title--after">DEPOIS</div>
-			  <figure class="compare__frame">
-				<img id="imgAfter" class="compare__img" src="img/bina-depois1_padrao.webp" alt="Depois" loading="lazy" decoding="async">
-			  </figure>
-		</div>
 
 		  <div class="compare__thumbs" aria-label="Escolha um exemplo">
 			<button class="compare__thumb is-active"
@@ -304,9 +306,6 @@
           <a class="footer__social" href="https://wa.me/5518991657604" target="_blank">
             <i class="fab fa-whatsapp"></i>
           </a>
-          <a class="footer__social" href="https://instagram.com/srconsultoria" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
         </div>
       </div>
 
@@ -322,6 +321,16 @@
     <i class="fas fa-arrow-up"></i>
   </a>
  
+ <!-- Lightbox -->
+<div id="lightbox" class="lightbox" aria-hidden="true">
+  <div class="lightbox__backdrop" data-close></div>
+
+  <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Visualização da imagem">
+    <button class="lightbox__close" type="button" aria-label="Fechar" data-close>×</button>
+    <img id="lightboxImg" class="lightbox__img" alt="Imagem ampliada">
+  </div>
+</div>
+
  <script src="js/main.js" defer></script>
   
 </body>
