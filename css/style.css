@@ -622,18 +622,6 @@
 	  box-shadow: 0 15px 35px rgba(57,201,122,.22);
 	}
 
-	/* mobile */
-		@media (max-width: 900px) {
-		  .compare__grid {
-			grid-template-columns: 1fr; /* 🔥 quebra SOMENTE no mobile */
-		  }
-
-		.compare__thumbs {
-		grid-template-columns: repeat(2, 1fr);
-	  }
-	}
-
-
 	/* Plans */
 	.plans__container {
 	  display: grid;
@@ -798,74 +786,6 @@
 	  opacity: .85;
 	}
 
-	/* Mobile */
-	@media (max-width: 768px) {
-	  .footer__container {
-		flex-direction: column;
-		gap: .8rem;
-		text-align: center;
-	  }
-	}
-
-
-	/* Scroll up */
-	.scrollup {
-	  position: fixed;
-	  right: 2rem;
-	  bottom: -20%;
-	  background: var(--first-color);
-	  color: white;
-	  padding: 0.7rem;
-	  border-radius: var(--radius-sm);
-	  box-shadow: 0 8px 25px rgba(57, 201, 122, 0.3);
-	  transition: all 0.4s var(--ease);
-	  z-index: 999;
-	  display: flex;
-	  align-items: center;
-	  justify-content: center;
-	  opacity: 0;
-	  visibility: hidden;
-	}
-
-	.scrollup.show-scroll {
-	  bottom: 2rem;
-	  opacity: 1;
-	  visibility: visible;
-	}
-
-	.scrollup:hover {
-	  background: var(--first-color-dark);
-	  transform: translateY(-5px);
-	}
-	.lightbox{
-  position: fixed;
-  inset: 0;
-  display: grid;
-  place-items: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .25s var(--ease);
-  z-index: 2000;
-}
-
-.lightbox.is-open{
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.lightbox__backdrop{
-  position: absolute;
-  inset: 0;
-  background: rgba(0,0,0,.65);
-}
-
-.lightbox__panel{
-  position: relative;
-  width: min(92vw, 980px);
-  max-height: 88vh;
-  background: #fff;
-  border-radius: 16px;
-  overflow: hidden;
   box-shadow: 0 20px 60px rgba(0,0,0,.35);
   padding: 12px;
 }
@@ -892,3 +812,7 @@
   border-radius: 12px;
   display: block;
 }
+
+
+	
+
