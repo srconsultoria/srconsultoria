@@ -47,9 +47,7 @@ function initHeaderHide() {
 
 /* ---------- Scroll Reveal ---------- */
 function initScrollReveal() {
-  const elements = $$(
-    ".services__card, .plan__card, .before-after-wrapper, .hero__data, .compare"
-  );
+  const elements = $$(".services__card, .plan__card, .before-after-wrapper, .hero__data, .compare");
   if (!elements.length) return;
 
   const observer = new IntersectionObserver(
@@ -66,13 +64,50 @@ function initScrollReveal() {
 
   elements.forEach((el) => observer.observe(el));
 }
+  function initLightbox() {
+	const lightbox = document.getElementById("lightbox");
+	const lightboxImg = document.getElementById("lightboxImg");
+	const imgBefore = document.getElementById("imgBefore");
+	const imgAfter = document.getElementById("imgAfter");
+
+  if (!lightbox || !lightboxImg || !imgBefore || !imgAfter) return;
+
+  const open = (src, alt = "") => {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt || "Imagem ampliada";
+    lightbox.classList.add("is-open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  };
+
+  const close = () => {
+    lightbox.classList.remove("is-open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    // opcional: limpa src para economizar memória
+    lightboxImg.src = "";
+  };
+
+  imgBefore.addEventListener("click", () => open(imgBefore.src, imgBefore.alt));
+  imgAfter.addEventListener("click", () => open(imgAfter.src, imgAfter.alt));
+
+  // fechar clicando fora ou no X
+  lightbox.addEventListener("click", (e) => {
+    if (e.target.matches("[data-close]")) close();
+  });
+
+  // fechar com ESC
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && lightbox.classList.contains("is-open")) close();
+  });
+}
 
 /* ---------- Compare simples (ANTES | DEPOIS) ---------- */
 function initSimpleCompare() {
   const imgBefore = $("#imgBefore");
   const imgAfter = $("#imgAfter");
   const thumbs = $$(".compare__thumb");
-
+  
   // Se a seção não existir, não faz nada
   if (!imgBefore || !imgAfter || !thumbs.length) return;
 
@@ -117,7 +152,6 @@ function initSimpleCompare() {
 document.addEventListener("DOMContentLoaded", () => {
   initHeaderHide();
   initScrollReveal();
-
-  // novo compare simples
-  initSimpleCompare();
+  initSimpleCompare();	
+  initLightbox();
 });
