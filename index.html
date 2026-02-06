@@ -20,12 +20,29 @@
         <img src="img/logo.webp" alt="S&R Consultoria" width="200" height="70">
       </a>
 
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link active" href="#home">Início</a></li>
+          <li class="nav__item nav__item--has-dropdown">
+            <a class="nav__link" href="#services">Serviços</a>
+            <div class="nav__dropdown">
+              <a href="#services">Fotos Profissionais</a>
+              <a href="#services">Cardápio que Vende Sozinho</a>
+              <a href="#plans">Planos</a>
+            </div>
+          </li>
+          <li class="nav__item"><a class="nav__link" href="#before-after">Resultados</a></li> <!-- Alterado para #before-after -->
+          <li class="nav__item"><a class="nav__link" href="#plans">Planos</a></li>
+          <li class="nav__item"><a class="nav__link" href="#contact">Contato</a></li>
+        </ul>
+
         <div class="nav__right">
           <a class="button" href="https://wa.me/5518991657604" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp
           </a>
           <button id="nav-close" class="nav__close"><i class="fas fa-times"></i></button>
-		</div>
+        </div>
+      </div>
 
       <button id="nav-toggle" class="nav__toggle"><i class="fas fa-bars"></i></button>
     </nav>
@@ -196,9 +213,7 @@
             </div>
             <ul class="plan__features">
               <li>Até 15 fotos profissionais</li>
-              <li>Você mesmo upa no iFood</li>
               <li>Entrega rápida via whatsapp com um link para não perder a qualidade!</li>
-              <li>Suporte por 7 dias no WhatsApp</li>
             </ul>
             <button class="plan__cta button" onclick="openWhatsApp('Plano Básico - R$150')">
               Quero este plano
@@ -212,7 +227,7 @@
               <span class="plan__amount">R$ 500</span>
             </div>
             <ul class="plan__features">
-              <li>Tudo do Básico + fotos ilimitadas</li>
+              <li>Fotos profissionais ilimitadas</li>
               <li>Combos estratégicos</li>
               <li>Google Business</li>
               <li>Reestruturação completa do cardápio</li>
@@ -318,4 +333,3 @@
   
 </body>
 </html>
-
