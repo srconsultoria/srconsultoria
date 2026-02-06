@@ -490,10 +490,9 @@
 	.compare {
 	  max-width: 900px;          /* deixa menor */
 	  margin: 0 auto;
-	  display: grid;
-	  grid-template-columns: 1fr 1fr;
-	  gap: 2rem;
-	  align-items: start;
+	  opacity: 0;
+	  transform: translateY(14px);
+	  transition: opacity .5s var(--ease), transform .5s var(--ease);
 	}
 	
 	.compare.revealed {
@@ -511,9 +510,6 @@
 
 	/* Container da imagem */
 	.compare__item {
-	  display: flex;
-	  flex-direction: column;
-	  align-items: center;
 	  background: #fff;
 	  border-radius: 18px;
 	  padding: 1rem;
@@ -525,9 +521,10 @@
 	  font-weight: 800;
 	  font-size: .9rem;
 	  letter-spacing: .05em;
-	  margin-bottom: .5rem;
+	  margin-bottom: .75rem;
 	  padding: .4rem 1.2rem;
 	  border-radius: 999px;
+	  width: fit-content;
 	}
 
 	.compare__title--before {
@@ -541,43 +538,44 @@
 	}
 
 	.compare__frame {
-	  background: #fff;
-	  border-radius: 18px;
+	  border-radius: 16px;
 	  overflow: hidden;
 	  box-shadow: 0 18px 45px rgba(0,0,0,.10);
-
-	  /* controla o tamanho visual do card */
-	  max-width: 380px;
 	}
 
 	/* Imagem */
 	.compare__img {
 	  width: 100%;
-	  max-width: 380px;  /* 🔥 deixa menor no desktop */
+	  height: auto;
 	  aspect-ratio: 9 / 16;
 	  object-fit: cover;
-	  border-radius: 14px;
+	  
 	  opacity: 1;
 	  transform: translateY(0);
 	  transition: opacity .28s var(--ease), transform .28s var(--ease);
+	  
+	  cursor: zoom-in;	
+	  pointer-events: auto;
 	}
 
 	.compare__img.is-fading {
 	  opacity: 0;
-	  transform: translateY(8px);
+	  transform: translateY(6px);
 	}
 
 	/* thumbs */
-	.compare__thumbs {
-	  margin-top: 1.6rem;
+	/* thumbs (mais largos e aproveitando melhor a tela) */
+	.compare__thumbs{
+	  margin-top: 1.8rem;
 	  display: grid;
-	  grid-template-columns: repeat(4, minmax(0, 1fr));
+	  grid-template-columns: repeat(4, minmax(180px, 1fr)); /* ↑ aumenta */
 	  gap: 1rem;
 
 	  /* fade no scroll junto do bloco */
 	  opacity: 0;
 	  transform: translateY(10px);
-	  transition: opacity .5s var(--ease), transform .5s var(--ease);
+	  transition: opacity .5s var(--ease), 
+	  transform .5s var(--ease);
 	}
 
 	.compare.revealed .compare__thumbs {
@@ -591,14 +589,14 @@
 	  background: #fff;
 	  overflow: hidden;
 	  cursor: pointer;
-	  padding: .6rem;
+	  padding: .75rem;
 	  display: grid;
 	  gap: .5rem;
 	  align-content: start;
 	  transition: .25s var(--ease);
 	  box-shadow: 0 10px 25px rgba(0,0,0,.08);
 	}
-
+	
 	.compare__thumb img {
 	  width: 100%;
 	  height: 90px;
@@ -628,11 +626,6 @@
 		@media (max-width: 900px) {
 		  .compare__grid {
 			grid-template-columns: 1fr; /* 🔥 quebra SOMENTE no mobile */
-			gap: 2rem;
-		  }
-
-		  .compare__frame {
-			max-width: 420px;
 		  }
 
 		.compare__thumbs {
@@ -804,3 +797,98 @@
 	  font-size: .72rem;
 	  opacity: .85;
 	}
+
+	/* Mobile */
+	@media (max-width: 768px) {
+	  .footer__container {
+		flex-direction: column;
+		gap: .8rem;
+		text-align: center;
+	  }
+	}
+
+
+	/* Scroll up */
+	.scrollup {
+	  position: fixed;
+	  right: 2rem;
+	  bottom: -20%;
+	  background: var(--first-color);
+	  color: white;
+	  padding: 0.7rem;
+	  border-radius: var(--radius-sm);
+	  box-shadow: 0 8px 25px rgba(57, 201, 122, 0.3);
+	  transition: all 0.4s var(--ease);
+	  z-index: 999;
+	  display: flex;
+	  align-items: center;
+	  justify-content: center;
+	  opacity: 0;
+	  visibility: hidden;
+	}
+
+	.scrollup.show-scroll {
+	  bottom: 2rem;
+	  opacity: 1;
+	  visibility: visible;
+	}
+
+	.scrollup:hover {
+	  background: var(--first-color-dark);
+	  transform: translateY(-5px);
+	}
+	.lightbox{
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity .25s var(--ease);
+  z-index: 2000;
+}
+
+.lightbox.is-open{
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox__backdrop{
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+}
+
+.lightbox__panel{
+  position: relative;
+  width: min(92vw, 980px);
+  max-height: 88vh;
+  background: #fff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+  padding: 12px;
+}
+
+.lightbox__close{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 42px;
+  height: 42px;
+  border: 0;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 28px;
+  line-height: 1;
+  background: rgba(0,0,0,.08);
+}
+
+.lightbox__img{
+  width: 100%;
+  height: auto;
+  max-height: calc(88vh - 24px);
+  object-fit: contain;
+  border-radius: 12px;
+  display: block;
+}
