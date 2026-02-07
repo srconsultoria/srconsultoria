@@ -107,7 +107,6 @@
 	  max-width: 100%;
 	  display: block;
 	  user-select: none;
-	  pointer-events: none;
 	}
 
 	/* Botões */
@@ -786,33 +785,140 @@
 	  opacity: .85;
 	}
 
-  box-shadow: 0 20px 60px rgba(0,0,0,.35);
-  padding: 12px;
-}
+	/* ===================== LIGHTBOX ===================== */
+	.lightbox{
+	  position: fixed;
+	  inset: 0;
+	  display: grid;
+	  place-items: center;
+	  opacity: 0;
+	  transition: opacity .25s var(--ease);
+	  z-index: 2000;
+	}
 
-.lightbox__close{
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  width: 42px;
-  height: 42px;
-  border: 0;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 28px;
-  line-height: 1;
-  background: rgba(0,0,0,.08);
-}
+	.lightbox.is-open{
+	  opacity: 1;
+	  pointer-events: auto;
+	}
 
-.lightbox__img{
-  width: 100%;
-  height: auto;
-  max-height: calc(88vh - 24px);
-  object-fit: contain;
-  border-radius: 12px;
-  display: block;
-}
+	.lightbox__backdrop{
+	  position: absolute;
+	  inset: 0;
+	  background: rgba(0,0,0,.65);
+	}
 
+	.lightbox__panel{
+	  position: relative;
+	  width: min(92vw, 980px);
+	  max-height: 88vh;
+	  background: #fff;
+	  border-radius: 16px;
+	  overflow: hidden;
+	  box-shadow: 0 20px 60px rgba(0,0,0,.35);
+	  padding: 12px;
+	}
 
-	
+	.lightbox__close{
+	  position: absolute;
+	  top: 10px;
+	  right: 10px;
+	  width: 42px;
+	  height: 42px;
+	  border: 0;
+	  border-radius: 12px;
+	  cursor: pointer;
+	  font-size: 28px;
+	  line-height: 1;
+	  background: rgba(0,0,0,.08);
+	}
 
+	.lightbox__img{
+	  width: 100%;
+	  height: auto;
+	  max-height: calc(88vh - 24px);
+	  object-fit: contain;
+	  border-radius: 12px;
+	  display: block;
+	}
+
+	/* ===================== RESPONSIVO (TUDO JUNTO) ===================== */
+
+	/* Até 900px: “mobile grande / tablet” */
+	@media (max-width: 900px){
+
+	  /* HEADER / NAV: evita estourar largura */
+	  .nav{
+		gap: .75rem;
+		padding: 0 1rem;
+	  }
+	  .nav__logo img{
+		width: 120px !important;
+		max-height: 46px;
+	  }
+	  .nav__list{
+		gap: .35rem;
+		flex-wrap: wrap;
+		justify-content: flex-end;
+	  }
+	  .nav__link{
+		padding: .35rem .55rem;
+		font-size: .9rem;
+	  }
+	  .nav__right .button{
+		display: none; /* no mobile, esconde o botão do topo pra não estourar */
+	  }
+
+	  /* HERO: 2 colunas -> 1 coluna */
+	  .hero__container{
+		grid-template-columns: 1fr !important;
+		gap: 1.5rem;
+		text-align: center;
+	  }
+	  .hero__data{
+		max-width: 100%;
+	  }
+	  .hero__blob{
+		justify-content: center;
+	  }
+	  .hero__img-main{
+		max-width: 320px;
+		width: 100%;
+		margin: 0 auto;
+	  }
+	  .hero__stats{
+		display: none; /* esses cards flutuantes quebram layout no mobile */
+	  }
+
+	  /* COMPARE: antes em cima / depois embaixo */
+	  .compare__grid{
+		grid-template-columns: 1fr;
+	  }
+
+	  /* thumbs: 4 -> 2 colunas */
+	  .compare__thumbs{
+		grid-template-columns: repeat(2, 1fr);
+	  }
+
+	  /* PLANS: 3 -> 1 coluna */
+	  .plans__container{
+		grid-template-columns: 1fr !important;
+	  }
+	}
+
+	/* Até 768px: mobile “padrão” */
+	@media (max-width: 768px){
+	  .section{
+		padding: 3rem 0;
+	  }
+
+	  .hero__title{
+		font-size: 2.2rem;
+	  }
+
+	  /* Footer já compacto, só ajusta empilhamento */
+	  .footer__container{
+		flex-direction: column;
+		gap: .8rem;
+		text-align: center;
+	  }
+	}
