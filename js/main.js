@@ -65,12 +65,10 @@ function initScrollReveal() {
   elements.forEach((el) => observer.observe(el));
 }
   function initLightbox() {
-	const lightbox = document.getElementById("lightbox");
-	const lightboxImg = document.getElementById("lightboxImg");
-	const imgBefore = document.getElementById("imgBefore");
-	const imgAfter = document.getElementById("imgAfter");
+  const lightbox = document.getElementById("lightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
 
-  if (!lightbox || !lightboxImg || !imgBefore || !imgAfter) return;
+  if (!lightbox || !lightboxImg) return;
 
   const open = (src, alt = "") => {
     lightboxImg.src = src;
@@ -84,14 +82,17 @@ function initScrollReveal() {
     lightbox.classList.remove("is-open");
     lightbox.setAttribute("aria-hidden", "true");
     document.body.style.overflow = "";
-    // opcional: limpa src para economizar memória
     lightboxImg.src = "";
   };
 
-  imgBefore.addEventListener("click", () => open(imgBefore.src, imgBefore.alt));
-  imgAfter.addEventListener("click", () => open(imgAfter.src, imgAfter.alt));
+  // Delegação: qualquer imagem do compare abre (antes/depois e futuras)
+  document.addEventListener("click", (e) => {
+    const img = e.target.closest(".compare__img");
+    if (!img) return;
+    open(img.src, img.alt);
+  });
 
-  // fechar clicando fora ou no X
+  // fechar clicando no backdrop ou no X
   lightbox.addEventListener("click", (e) => {
     if (e.target.matches("[data-close]")) close();
   });
@@ -101,6 +102,7 @@ function initScrollReveal() {
     if (e.key === "Escape" && lightbox.classList.contains("is-open")) close();
   });
 }
+
 
 /* ---------- Compare simples (ANTES | DEPOIS) ---------- */
 function initSimpleCompare() {
@@ -155,3 +157,10 @@ document.addEventListener("DOMContentLoaded", () => {
   initSimpleCompare();	
   initLightbox();
 });
+
+/* ---------- WhatsApp (botões do plano) ---------- */
+function openWhatsApp(msg) {
+  const phone = "5518991657604";
+  const text = encodeURIComponent(`Olá! Tenho interesse: ${msg}`);
+  window.open(`https://wa.me/${phone}?text=${text}`, "_blank", "noopener,noreferrer");
+}
