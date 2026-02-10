@@ -400,7 +400,29 @@
 	  line-height: 1.7;
 	}
 
-	/* PARTE VISUAL ATUALIZADA */
+	
+	.hero__bullets{
+	  list-style: none;
+	  padding: 0;
+	  margin: 0 0 2rem;
+	  display: grid;
+	  gap: .55rem;
+	  color: var(--muted);
+	  font-size: 1.05rem;
+	  line-height: 1.5;
+	}
+	.hero__bullets li{
+	  padding-left: 1.4rem;
+	  position: relative;
+	}
+	.hero__bullets li::before{
+	  content: "✓";
+	  position: absolute;
+	  left: 0;
+	  color: var(--first-color);
+	  font-weight: 800;
+	}
+/* PARTE VISUAL ATUALIZADA */
 	.hero__blob {
 	  position: relative;
 	  display: flex;
@@ -540,6 +562,7 @@
 	  border-radius: 16px;
 	  overflow: hidden;
 	  box-shadow: 0 18px 45px rgba(0,0,0,.10);
+  border: 1px solid rgba(0,0,0,.06);
 	}
 
 	/* Imagem */
@@ -792,7 +815,8 @@
 	  display: grid;
 	  place-items: center;
 	  opacity: 0;
-	  transition: opacity .25s var(--ease);
+	  pointer-events: none;
+  transition: opacity .25s var(--ease);
 	  z-index: 2000;
 	}
 
