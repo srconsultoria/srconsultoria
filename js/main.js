@@ -87,7 +87,7 @@ function initScrollReveal() {
 
   // Delegação: qualquer imagem do compare abre (antes/depois e futuras)
   document.addEventListener("click", (e) => {
-    const img = e.target.closest(".compare__img");
+    const img = e.target.closest(".compare__img, .zoomable");
     if (!img) return;
     open(img.src, img.alt);
   });
