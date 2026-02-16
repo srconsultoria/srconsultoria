@@ -12,30 +12,19 @@
   <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 </head>
 <body>
-
   <!-- Header -->
   <header class="header" id="header">
     <nav class="nav container">
       <a class="nav__logo" href="#home">
         <img src="img/logo.webp" alt="S&R Consultoria" width="200" height="70">
       </a>
-
       <div class="nav__menu" id="nav-menu">
         <ul class="nav__list">
           <li class="nav__item"><a class="nav__link active" href="#home">Início</a></li>
-          <li class="nav__item nav__item--has-dropdown">
-            <a class="nav__link" href="#services">Serviços</a>
-            <div class="nav__dropdown">
-              <a href="#services">Fotos Profissionais</a>
-              <a href="#services">Cardápio que Vende Sozinho</a>
-              <a href="#plans">Planos</a>
-            </div>
-          </li>
-          <li class="nav__item"><a class="nav__link" href="#before-after">Resultados</a></li>
+          <li class="nav__item"><a class="nav__link" href="#before-after">Resultados</a></li> <!-- Alterado para #before-after -->
           <li class="nav__item"><a class="nav__link" href="#google-business">Google Business</a></li>
           <li class="nav__item"><a class="nav__link" href="#plans">Planos</a></li>
         </ul>
-
         <div class="nav__right">
           <a class="button" href="https://wa.me/5518991657604" target="_blank">
             <i class="fab fa-whatsapp"></i> WhatsApp
@@ -43,38 +32,34 @@
           <button id="nav-close" class="nav__close"><i class="fas fa-times"></i></button>
         </div>
       </div>
-
       <button id="nav-toggle" class="nav__toggle"><i class="fas fa-bars"></i></button>
     </nav>
   </header>
-
   <main class="main">
-
     <!-- Hero -->
     <section class="hero section" id="home">
       <div class="hero__container container">
         <div class="hero__data">
           <h1 class="hero__title">Transforme seu delivery em uma <span>máquina de vendas</span></h1>
-          <ul class="hero__bullets">
-            <li>Reestruturação completa de cardápio iFood</li>
-            <li>Fotos profissionais</li>
-            <li>Combos estratégicos</li>
-            <li>Inclusão ou melhorias no Google Business</li>
-            <li>Automatização do WhatsApp (resposta automática + atualização do cardápio)</li>
-          </ul>
+          <p class="hero__description">
+            • Reestruturação completa de cardápio iFood <br>
+            • Fotos profissionais <br>
+            • Combos estratégicos <br>
+            • Inclusão ou melhorias no Google Business<br>
+            • Automatização do WhatsApp:<br>
+              Resposta automática | Atualização do Cardápio
+          </p>
           <a class="button button--cta" href="#contact">
             <i class="fas fa-calendar-check"></i>
             Quero análise gratuita do meu cardápio
           </a>
         </div>
-
         <div class="hero__blob">
          <img src="img/hero-img.webp" alt="Fotos Profissionais" class="hero__img-main" loading="lazy" decoding="async">      
           <div class="hero__stats card-1">
             <i class="fas fa-chart-line"></i>
             <span>+45% Conversão</span>
           </div>
-          
           <div class="hero__stats card-2">
             <i class="fas fa-star"></i>
             <span>Nota 4.9 no iFood</span>
@@ -82,16 +67,12 @@
         </div>
       </div>
     </section>
-
-
    <!-- Services -->
     <section id="services" class="services section">
       <div class="container">
         <h2 class="section__title">Estratégias de Alto Impacto</h2>
         <p class="section__subtitle">Tudo o que seu delivery precisa para sair da invisibilidade e vender todos os dias.</p>
-
         <div class="services__container">
-          
           <div class="services__card" data-service="Fotos Profissionais">
             <div class="services__icon"><i class="fas fa-camera"></i></div>
             <div class="services__content">
@@ -99,7 +80,6 @@
               <p class="services__description">Transformamos seus pratos em desejo imediato com iluminação e edição de alto padrão.</p>
             </div>
           </div>
-
           <div class="services__card" data-service="Cardápio que Vende Sozinho">
             <div class="services__icon"><i class="fas fa-utensils"></i></div>
             <div class="services__content">
@@ -107,7 +87,6 @@
               <p class="services__description">Engenharia de cardápio com descrições persuasivas e categorias que facilitam a compra.</p>
             </div>
           </div>
-
           <div class="services__card" data-service="Combos Estratégicos">
             <div class="services__icon"><i class="fas fa-chart-line"></i></div>
             <div class="services__content">
@@ -115,7 +94,6 @@
               <p class="services__description">Criação de combos inteligentes que aumentam o lucro por pedido e a recorrência dos clientes.</p>
             </div>
           </div>
-
           <div class="services__card" data-service="Google Meu Negócio">
             <div class="services__icon"><i class="fas fa-map-marker-alt"></i></div>
             <div class="services__content">
@@ -123,7 +101,6 @@
               <p class="services__description">Sua loja no topo das buscas locais com perfil otimizado, fotos reais e SEO estratégico.</p>
             </div>
           </div>
-
           <div class="services__card" data-service="WhatsApp Business">
             <div class="services__icon"><i class="fab fa-whatsapp"></i></div>
             <div class="services__content">
@@ -131,22 +108,20 @@
               <p class="services__description">Catálogo profissional e automação inteligente para você nunca mais perder um pedido por demora.</p>
             </div>
           </div>
-          
           <div class="services__card" data-service="Suporte Tecnológico">
             <div class="services__icon"><i class="fas fa-microchip"></i></div>
             <div class="services__content">
               <h3 class="services__title">Operação Blindada</h3>
               <p class="services__description">Suporte em redes, roteadores e dispositivos (celular/PC) para garantir que sua loja nunca fique offline.</p>
             </div>
-          </div>
-        </div>
+		  </div>
+	    </div>
     </section>
 	
 	<section id="before-after" class="section">
 		<div class="container">
 			<h2 class="section__title">Antes e Depois</h2>
 			<p class="section__subtitle">Resultados reais no cardápio</p>
-
 		<div class="compare">	
 			<div class="compare__grid">
 			  <figure class="compare__item">
@@ -155,7 +130,6 @@
 				<img id="imgBefore" class="compare__img" src="img/bina-antes1_padrao.webp" alt="Antes" loading="lazy" decoding="async">
 			  </div>
 			</figure>
-
 			<figure class="compare__item">
 				<div class="compare__title compare__title--after">DEPOIS</div>
 			<div class="compare__frame">
@@ -163,7 +137,6 @@
 				</div>
 			  </figure>
 			</div>
-
 		  <div class="compare__thumbs" aria-label="Escolha um exemplo">
 			<button class="compare__thumb is-active"
 			  data-before="img/bina-antes1_padrao.webp"
@@ -171,21 +144,18 @@
 			  <img src="img/bina-depois1_padrao.webp" alt="Exemplo 1">
 			  <span>Resultado 1</span>
 			</button>
-
 			<button class="compare__thumb"
 			  data-before="img/bina-antes2_padrao.webp"
 			  data-after="img/bina-depois3_padrao.webp" type="button">
 			  <img src="img/bina-depois3_padrao.webp" alt="Exemplo 2">
 			  <span>Resultado 2</span>
 			</button>
-
 			<button class="compare__thumb"
 			  data-before="img/bina-antes3_padrao.webp"
 			  data-after="img/bina-depois4_padrao.webp" type="button">
 			  <img src="img/bina-depois4_padrao.webp" alt="Exemplo 3">
 			  <span>Resultado 3</span>
 			</button>
-
 			<button class="compare__thumb"
 			  data-before="img/bina-antes4_padrao.webp"
 			  data-after="img/bina-depois5_padrao.webp" type="button">
@@ -225,67 +195,87 @@
       </div>
     </section>
 
-
-
-
     <!-- Plans -->
     <section id="plans" class="plans section">
       <div class="container">
         <h2 class="section__title">Escolha seu Plano</h2>
         <p class="section__subtitle">Planos flexíveis para diferentes necessidades</p>
-        
         <div class="plans__container">
           <article class="plan__card">
-            <h3 class="plan__title">Básico</h3>
-            <div class="plan__price">
-              <span class="plan__amount">R$ 150</span>
-            </div>
-            <ul class="plan__features">
-              <li>Até 15 fotos profissionais</li>
-              <li>Entrega rápida via whatsapp com um link para não perder a qualidade!</li>
-            </ul>
-            <button class="plan__cta button" onclick="openWhatsApp('Plano Básico - R$150')">
-              Quero este plano
-            </button>
-          </article>
+            <h3 class="plan__title">Start</h3>
+           <div class="plan__price">
+				<span class="plan__amount">R$ 149,90</span>
+				<span class="plan__from">de <strong>R$ 197</strong> • no Pix/à vista</span>
+			</div>
 
+			<span class="plan__subtitle">Condição de Lançamento • 100% online</span>
+            <ul class="plan__features">
+				<li>Aumento rápido nas vendas do iFood</li>
+				<li>Otimização de até 8 fotos enviadas pelo cliente</li>
+				<li>Correção de iluminação e enquadramento (edição profissional)</li>
+				<li>Entrega em até 3 dias úteis</li>
+				<li class="plan__note">
+					*Serviço online: você envia as fotos e a gente otimiza tudo.
+				</li>
+            </ul>
+			<button class="plan__cta button" onclick="openWhatsApp('Plano Start (Condição de Lançamento) - de R$197 por R$149,90 no Pix')">
+			  Quero o plano Start
+			</button>
+          </article>
           <article class="plan__card popular">
             <span class="plan__badge">Mais vendido</span>
-            <h3 class="plan__title">Premium</h3>
+            <h3 class="plan__title">Crescimento</h3>
+			<span class="plan__subtitle">Pode incluir visitas</span>
             <div class="plan__price">
-              <span class="plan__amount">R$ 500</span>
+              <span class="plan__amount">R$ 497,00</span>
             </div>
             <ul class="plan__features">
-              <li>Fotos profissionais ilimitadas</li>
-              <li>Combos estratégicos</li>
-              <li>Google Business</li>
+              <li>Até 20 fotos profissionais</li>
               <li>Reestruturação completa do cardápio</li>
-            </ul>
-            <button class="plan__cta button button--white" onclick="openWhatsApp('Plano Premium - R$ 500')">
-              Quero este plano
+              <li>Criação de combos estratégicos</li>
+              <li>Otimização Google Business</li>
+			  <li>Padronização de descrições</li>
+			  <li>*Desenvolvimento ou aprimoração de website</li>
+			  <li class="plan__note">*Site é opcional: posso criar ou melhorar se o cliente quiser. Domínio/hospedagem são por conta do cliente (ou posso orientar). Se já tiver site, basta fornecer acesso para eu realizar as alterações.</li>
+			 </ul>
+            <button class="plan__cta button" onclick="openWhatsApp('Plano Crescimento - R$497,00')">
+              Quero o Plano Crescimento
             </button>
           </article>
-
+	  
           <article class="plan__card">
-            <h3 class="plan__title">Enterprise</h3>
+            <h3 class="plan__title">Escala</h3>
+			<span class="plan__subtitle">Visita Presencial</span>
             <div class="plan__price">
               <span class="plan__amount">Sob consulta</span>
             </div>
             <ul class="plan__features">
-              <li>Tudo que inclui no plano premium</li>
-              <li>Para redes com 3 ou + lojas</li>
-              <li>Gestão completa e relatórios</li>
-              <li>Consultoria personalizada</li>
-              <li>Suporte prioritário</li>
+              <li>Fotos ilimitadas</li>
+              <li>Engenharia completa de cardápio</li>
+              <li>Estratégia de ticket médio</li>
+              <li>Google Business avançado</li>
+              <li>Automação WhatsApp</li>
+			  <li>Suporte estratégico 30 dias</li>
+			  <li>*Desenvolvimento ou aprimoração de website</li>
+			  <li class="plan__note">*Site é opcional: posso criar ou melhorar se o cliente quiser. Domínio/hospedagem são por conta do cliente (ou posso orientar). Se já tiver site, basta fornecer acesso para eu realizar as alterações.</li>
             </ul>
-            <button class="plan__cta button" onclick="openWhatsApp('Plano Enterprise - Sob consulta')">
-              Falar com consultor
+            <button class="plan__cta button" onclick="openWhatsApp('Plano Escala - Sob consulta')">
+              Solicitar proposta personalizada
             </button>
           </article>
-        </div>
-      </div>
+		</div>
+	  </div>
     </section>
-
+	
+	<div class="plans__meta">
+		<p class="plans__guarantee">
+			Garantia de satisfação: se precisar, faço ajustes sem custo após a entrega.
+		</p>
+		<p class="plans__disclaimer">
+			Serviço pontual (pagamento único). Não é ASSINATURA! Não há mensalidades.
+		</p>
+	</div>
+	
 	<section class="section">
 	  <div class="container" style="text-align:center;">
 		<a class="button" href="#" onclick="alert('Portfólio em construção!')">
@@ -293,33 +283,26 @@
 		</a>
 	  </div>
 	</section>
-
-
  <section id="contact" class="contact section">
       <div class="container">
         <h2 class="section__title">Fale Conosco</h2>
-        <p class="section__title">Atendemos apenas 4 novos restaurantes por mês para garantir a qualidade.</p>
+		<p class="section__subtitle">Atendemos apenas 4 novos restaurantes...</p>
         <p class="section__subtitle">Para uma análise gratuita do seu cardápio, fale diretamente pelo WhatsApp</p>
-
         <div class="contact__cta">
           <a class="button" href="https://wa.me/5518991657604?text=Olá! Gostaria de uma análise gratuita do meu cardápio." target="_blank">
             <i class="fab fa-whatsapp"></i> Abrir WhatsApp
           </a>
-
           <a class="button button--link" href="tel:+5518991657604">
             <i class="fas fa-phone"></i> Ligar agora
           </a>
         </div>
-
         <div style="text-align:center; margin-top:2rem; color:var(--muted); font-size:.95rem; max-width:600px; margin-left:auto; margin-right:auto;">
-          <p><i class="fas fa-clock"></i> Atendimento: Segunda a Sexta, 9h às 18h</p>
+          <p><i class="fas fa-clock"></i> Agenda aberta para novos projetos com início a partir de 1º de julho de 2026.</p>
           <p><i class="fas fa-check-circle" style="color: var(--first-color);"></i> Análise gratuita em até 24h</p>
         </div>
       </div>
     </section>
-
   </main>
-
   <!-- Footer -->
   <footer class="footer">
     <div class="footer__bg">
@@ -328,38 +311,30 @@
           <h3 class="footer__title">S&R Consultoria</h3>
           <div class="footer__subtitle">Fotos e estratégia para aumentar vendas no delivery</div>
         </div>
-
 <div class="footer__socials">
           <a class="footer__social" href="https://wa.me/5518991657604" target="_blank">
             <i class="fab fa-whatsapp"></i>
           </a>
         </div>
       </div>
-
 	<p class="footer__copy">
 	  © 2025 S&R Consultoria ® • Todos os direitos reservados<br>
 	  <span class="footer__cnpj">CNPJ: 62.219.322/0001-83</span>
 	</p>
     </div>
   </footer>
-
  <!-- Scroll up -->
   <a href="#home" id="scroll-up" class="scrollup">
     <i class="fas fa-arrow-up"></i>
   </a>
- 
  <!-- Lightbox -->
 <div id="lightbox" class="lightbox" aria-hidden="true">
   <div class="lightbox__backdrop" data-close></div>
-
   <div class="lightbox__panel" role="dialog" aria-modal="true" aria-label="Visualização da imagem">
     <button class="lightbox__close" type="button" aria-label="Fechar" data-close>×</button>
     <img id="lightboxImg" class="lightbox__img" alt="Imagem ampliada">
   </div>
 </div>
-
  <script src="js/main.js" defer></script>
-  
 </body>
 </html>
-
