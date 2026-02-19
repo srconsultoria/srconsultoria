@@ -97,6 +97,7 @@ img {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
+	text-align: center;
 	gap: 0.5rem;
 	background: var(--first-color);
 	color: white;
@@ -590,149 +591,176 @@ img {
 	box-shadow: 0 15px 35px rgba(57, 201, 122, .22)
 }
 
-.plans__container {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 2rem;
-	margin-top: 2.5rem
+/* ========== PLANS ========== */
+
+.plans__container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 2.5rem;
 }
 
-.plan__card {
-	background: var(--white);
-	padding: 2rem;
-	border-radius: var(--radius);
-	box-shadow: var(--shadow-soft);
-	transition: all 0.4s var(--ease);
-	position: relative;
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	border: 1px solid rgba(0, 0, 0, 0.05)
+.plan__card{
+  background: var(--white);
+  padding: 2rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  transition: transform .35s var(--ease), box-shadow .35s var(--ease), border-color .35s var(--ease);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid rgba(0,0,0,.05);
 }
 
-.plan__card:hover {
-	transform: translateY(-10px);
-	box-shadow: 0 25px 60px rgba(0, 0, 0, 0.1)
+.plan__card:hover{
+  transform: translateY(-8px);
+  box-shadow: 0 25px 60px rgba(0,0,0,.10);
 }
 
-.plan__card.popular {
-	border: 2px solid var(--first-color);
-	transform: translateY(-5px)
+/* Card destacado */
+.plan__card.popular{
+  border: 2px solid var(--first-color);
 }
 
-.plan__badge {
-	position: absolute;
-	top: -12px;
-	left: 50%;
-	transform: translateX(-50%);
-	background: var(--first-color);
-	color: white;
-	padding: 0.4rem 1.2rem;
-	border-radius: 20px;
-	font-size: 0.8rem;
-	font-weight: 600;
-	box-shadow: 0 5px 15px rgba(57, 201, 122, 0.3)
+/* Hover do popular sem “somar transform” */
+.plan__card.popular:hover{
+  transform: translateY(-8px);
 }
 
-.plan__title {
-	font-size: 1.5rem;
-	font-weight: 700;
-	margin-bottom: 1rem;
-	color: var(--text);
-	text-align: center
+.plan__badge{
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--first-color);
+  color: #fff;
+  padding: .4rem 1.2rem;
+  border-radius: 20px;
+  font-size: .8rem;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(57, 201, 122, .30);
 }
 
-.plan__subtitle {
+.plan__title{
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: var(--text);
+  text-align: center;
+}
+
+.plan__subtitle{
   display: block;
   text-align: center;
-  font-size: 0.85rem;
-  color: #b71c1c;
-  opacity: 0.85;
-  margin-top: -0.5rem;
+  font-size: .85rem;
+  color: var(--first-color);
+  opacity: .85;
+  margin-top: -.5rem;
   margin-bottom: 1rem;
   font-weight: 500;
 }
 
-.plan__price {
-	text-align: center;
-	margin-bottom: 1.5rem
+.plan__price{
+  text-align: center;
+  margin-bottom: 1.5rem;
 }
 
-.plan__amount {
-	font-size: 2rem;
-	font-weight: 800;
-	color: var(--first-color);
-	line-height: 1
+.plan__amount{
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--first-color);
+  line-height: 1;
 }
 
 .plan__from{
-  display:block;
-  margin-top:.35rem;
-  color:var(--muted);
+  display: block;
+  margin-top: .35rem;
+  color: var(--muted);
   opacity: .85;
-  font-size:.85rem;
+  font-size: .85rem;
 }
 
 .plan__from strong{
-  text-decoration:line-through;
-  font-weight:700;
+  text-decoration: line-through;
+  font-weight: 700;
 }
 
-.plans__meta{
-  margin-top:1.2rem;
-  text-align:center;
-  max-width:760px;
-  margin-left:auto;
-  margin-right:auto;
+.plan__features{
+  list-style: none;
+  margin: 0 0 2rem 0;
+  padding: 0;
+  flex: 1;
 }
 
-.plans__guarantee,.plans__disclaimer{
-  margin:.35rem 0;
-  color:var(--muted);
-  font-size:.95rem;
-  line-height:1.5;
+.plan__features li{
+  padding: .6rem 0;
+  color: var(--text-light);
+  position: relative;
+  padding-left: 1.8rem;
 }
 
-.plan__features {
-	list-style: none;
-	margin: 0 0 2rem 0;
-	padding: 0;
-	flex: 1
+.plan__features li::before{
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: .55rem;
+  color: var(--first-color);
+  font-weight: 700;
 }
 
-.plan__features li {
-	padding: 0.6rem 0;
-	color: var(--text-light);
-	position: relative;
-	padding-left: 1.8rem
-}
-
-.plan__features li::before {
-	content: '✓';
-	position: absolute;
-	left: 0;
-	color: var(--first-color);
-	font-weight: bold
-}
-
-/* Observação do plano (nota) */
+/* Observação do plano */
 .plan__features li.plan__note{
-  color: #b71c1c;
-  opacity: .85;
+  color: var(--first-color);
+  opacity: .75;
   font-size: .82rem;
   font-style: italic;
   margin-top: .6rem;
-  padding-left: 0;      /* tira o recuo do ✓ */
+  padding-left: 0;
   line-height: 1.4;
 }
 
-.plan__features li.plan__note::before {
+
+.plan__features li.plan__note::before{
   display: none;
 }
 
-.plan__cta {
-	margin-top: auto;
-	width: 100%
+.plan__cta{
+  margin-top: auto;
+  width: 100%;
+}
+
+.plan__cta.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Meta abaixo dos cards */
+.plans__meta{
+  margin-top: 1.1rem;
+  text-align: center;
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.plans__guarantee,
+.plans__disclaimer{
+  margin: .35rem 0;
+  color: var(--muted);
+  font-size: .8rem;
+  line-height: 1.4;
+}
+
+/* Botões do portfólio */
+.portfolio__buttons{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: .9rem;
 }
 
 .contact__cta {
@@ -937,6 +965,14 @@ img {
 		gap: .8rem;
 		text-align: center
 	}
+}
+
+/* Mobile */
+@media (max-width: 992px){
+  .plans__container{
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
 }
 
 @media (max-width:480px) {
